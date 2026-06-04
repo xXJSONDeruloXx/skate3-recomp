@@ -35,9 +35,10 @@ The Linux package follows the same folder-drop convention:
 1. Extract the Linux zip.
 2. Open the folder named `Skate 3 Files`.
 3. Put your Skate 3 dump in that folder.
-4. Run `Launch Skate 3 Recomp.sh`.
+4. Run `Setup Skate 3 Recomp.sh`.
+5. Launch with `Launch Skate 3 Recomp.sh`.
 
-A `.desktop` launcher is also included for Linux desktop environments.
+`.desktop` launchers are also included for Linux desktop environments.
 
 ## What Goes In `Skate 3 Files`
 

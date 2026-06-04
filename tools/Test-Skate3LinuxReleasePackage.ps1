@@ -22,12 +22,16 @@ function Require-Contains([string]$Text, [string]$Needle) {
 $readme = Get-Content -LiteralPath (Join-Path $packageRoot "README.txt") -Raw
 $dropNote = Get-Content -LiteralPath (Join-Path $packageRoot "Skate 3 Files\Put Skate 3 files here.txt") -Raw
 $launcher = Get-Content -LiteralPath (Join-Path $packageRoot "Launch Skate 3 Recomp.sh") -Raw
+$setup = Get-Content -LiteralPath (Join-Path $packageRoot "Setup Skate 3 Recomp.sh") -Raw
 
 Require-Contains $readme "default.xex_uncrypted.xex"
+Require-Contains $readme "Setup Skate 3 Recomp.sh"
 Require-Contains $readme "Launch Skate 3 Recomp.sh"
 Require-Contains $dropNote "default.xex_uncrypted.xex"
-Require-Contains $launcher "Skate 3 Files"
-Require-Contains $launcher "librexruntimerd.so"
+Require-Contains $launcher "work/runtime-assets"
+Require-Contains $launcher "--skate3-physics-timing 1"
+Require-Contains $setup "work/assets"
+Require-Contains $setup "work/runtime-assets"
 
 if (-not [string]::IsNullOrWhiteSpace($PackageZip)) {
   if (-not (Test-Path -LiteralPath $PackageZip -PathType Leaf)) {
@@ -41,6 +45,9 @@ if (-not [string]::IsNullOrWhiteSpace($PackageZip)) {
     foreach ($required in @(
       "Skate3Recomp-Linux/Launch Skate 3 Recomp.sh",
       "Skate3Recomp-Linux/Launch Skate 3 Recomp.desktop",
+      "Skate3Recomp-Linux/Setup Skate 3 Recomp.sh",
+      "Skate3Recomp-Linux/Setup Skate 3 Recomp.desktop",
+      "Skate3Recomp-Linux/launchers/Setup-Skate3Recomp.sh",
       "Skate3Recomp-Linux/app/skate3",
       "Skate3Recomp-Linux/app/librexruntimerd.so"
     )) {

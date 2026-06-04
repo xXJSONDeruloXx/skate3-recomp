@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Setup Skate 3 Recomp
+Comment=Prepare the Skate 3 runtime files in this folder
+Terminal=true
+Exec=sh -c 'cd "$(dirname "%k")" && ./Setup\ Skate\ 3\ Recomp.sh'
+Icon=applications-games
+Categories=Game;

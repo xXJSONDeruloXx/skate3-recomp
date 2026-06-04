@@ -6,7 +6,12 @@ Required:
 - data
 - nxeart
 
-Then launch:
+Then run:
+- Setup Skate 3 Recomp.sh
+or
+- Setup Skate 3 Recomp.desktop
+
+After setup, launch with:
 - Launch Skate 3 Recomp.sh
 or
 - Launch Skate 3 Recomp.desktop
