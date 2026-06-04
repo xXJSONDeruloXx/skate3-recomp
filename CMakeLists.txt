@@ -74,6 +74,12 @@ if(CMAKE_CXX_COMPILER_VERSION VERSION_LESS "18.0")
     message(FATAL_ERROR "ReXGlue requires Clang 18 or newer (found ${CMAKE_CXX_COMPILER_VERSION})")
 endif()
 
+if(UNIX AND NOT APPLE AND CMAKE_CXX_COMPILER_VERSION VERSION_LESS "20.0")
+    message(FATAL_ERROR
+        "Linux builds require Clang 20 or newer (found ${CMAKE_CXX_COMPILER_VERSION}). "
+        "This matches the shipped Linux presets and upstream wiki guidance.")
+endif()
+
 # Enforce x64 architecture
 if(NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
     message(FATAL_ERROR "ReXGlue only supports 64‑bit architectures (x86_64 or ARM64)")

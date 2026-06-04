@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Launch Skate 3 Recomp
+Comment=Launch Skate 3 Recomp from this folder
+Terminal=true
+Exec=sh -c 'cd "$(dirname "%k")" && ./Launch\ Skate\ 3\ Recomp.sh'
+Icon=applications-games
+Categories=Game;

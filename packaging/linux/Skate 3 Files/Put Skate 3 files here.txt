@@ -1,0 +1,15 @@
+Put your legally obtained Skate 3 dump here.
+
+Required:
+- default.xex
+- default.xex_uncrypted.xex
+- data
+- nxeart
+
+Then launch:
+- Launch Skate 3 Recomp.sh
+or
+- Launch Skate 3 Recomp.desktop
+
+To create default.xex_uncrypted.xex from your own dump:
+xextool -e d -c b -o default.xex_uncrypted.xex default.xex

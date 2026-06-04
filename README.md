@@ -13,6 +13,8 @@ legally obtained Xbox 360 game dump.
 
 ## Easy Setup
 
+### Windows package
+
 Use this flow if you downloaded the Windows zip from
 [GitHub Releases](https://github.com/portingpete/skate3-recomp/releases/latest).
 
@@ -25,6 +27,17 @@ Use this flow if you downloaded the Windows zip from
 
 Leave `Start game when ready` checked if you want the setup tool to launch the
 game automatically when it finishes.
+
+### Linux package
+
+The Linux package follows the same folder-drop convention:
+
+1. Extract the Linux zip.
+2. Open the folder named `Skate 3 Files`.
+3. Put your Skate 3 dump in that folder.
+4. Run `Launch Skate 3 Recomp.sh`.
+
+A `.desktop` launcher is also included for Linux desktop environments.
 
 ## What Goes In `Skate 3 Files`
 
@@ -76,9 +89,10 @@ these:
 - `default.xex_uncrypted.xex` is missing.
 - The dump is incomplete.
 
-For developer/source-build setup notes, see [SKATE3_SETUP.md](SKATE3_SETUP.md).
-For attribution covering Skate 3 Recomp and its dependencies, see
-[CREDITS.md](CREDITS.md).
+For developer/source-build setup notes, see [SKATE3_SETUP.md](SKATE3_SETUP.md)
+for the current Windows flow and [SKATE3_SETUP_LINUX.md](SKATE3_SETUP_LINUX.md)
+for Linux / Docker builds. For attribution covering Skate 3 Recomp and its
+dependencies, see [CREDITS.md](CREDITS.md).
 
 ## Current Status
 
